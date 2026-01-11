@@ -1,22 +1,25 @@
 # scripts/scorer.py
 
-# 1. Defining our first lead using a Dictionary
-lead_1 = {
-    "name": "Global Tech",
-    "website_visits": 15,
-    "has_requested_demo": True,
-    "budget": 12000.0
-}
+lead_1 = {"name": "Global Tech", "visits": 15, "demo": True, "budget": 12000.0}
+lead_2 = {"name": "Small Biz Inc", "visits": 2, "demo": False, "budget": 500.0}
 
-# 2. Defining a second lead for comparison
-lead_2 = {
-    "name": "Small Biz Inc",
-    "website_visits": 2,
-    "has_requested_demo": False,
-    "budget": 500.0
-}
-
-# 3. Putting them into a List (The Warehouse)
 all_leads = [lead_1, lead_2]
 
-print(f"Successfully loaded {len(all_leads)} leads for scoring.")
+print(f"--- Processing {len(all_leads)} Leads ---")
+
+for lead in all_leads:
+    score = 0
+    
+    # Rule 1: High Engagement (Technical Logic)
+    if lead["visits"] > 10:
+        score += 30
+        
+    # Rule 2: High Intent (Negotiation Point)
+    if lead["demo"]:
+        score += 50
+        
+    # Rule 3: High Value (Data Literacy)
+    if lead["budget"] > 5000:
+        score += 20
+    
+    print(f"Lead: {lead['name']} | Total Score: {score}")
