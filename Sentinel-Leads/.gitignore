@@ -1,0 +1,18 @@
+# --- DO NOT TRACK THESE FOLDERS ---
+02_Learning_Vault/
+03_Startup_Foundry/
+00_Admin/
+
+# --- PYTHON JUNK ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# --- OS JUNK ---
+.DS_Store
+Thumbs.db
+
+# --- PROJECT EXPORTS ---
+01_Projects/Sentinel-Leads/exports/*
