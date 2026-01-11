@@ -5,7 +5,7 @@ lead_2 = {"name": "Small Biz Inc", "visits": 2, "demo": False, "budget": 500.0}
 
 all_leads = [lead_1, lead_2]
 
-print(f"-- Processing {len(all_leads)} Leads --")
+print(f"-- Processing {len(all_leads)} Leads ---")
 
 for lead in all_leads:
     score = 0
